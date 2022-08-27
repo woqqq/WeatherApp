@@ -1,0 +1,12 @@
+body {
+    background-image: url("/img/Background.png");
+    background-size: cover;
+}
+
+.weathericon {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
