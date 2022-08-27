@@ -1,2 +1,2 @@
 # WeatherApp
-Web Weather Application with HTML, CSS, Bootstrap
+Weather Web Application with HTML, CSS and Bootstrap
