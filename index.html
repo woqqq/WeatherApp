@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="De-de">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- Weathermap.org password: weathergoeck123.
+    https://api.openweathermap.org/data/2.5/forecast?q=london&appid=df63e32cf56eaeb27189ef1ecf347c34-->
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -16,51 +17,52 @@
 </head>
 
 <body>
+    
     <div class="container overflow-hidden mt-5">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="stadtInput" placeholder="Suchen Sie nach Ihrer erwünschten Stadt" aria-label="Suchen Sie nach Ihrer erwünschten Stadt" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" onclick="GetInfo()" id="button-addon2">Suchen</button>
+          </div>
         <div class="row">
-                <div class="card col-lg-3 col-md-6 col-12">
+                <div class="card card1 col-lg-3 col-md-6 col-12 gy-5 gy-lg-0 gy-md-0">
                     <div class="card-body">
                         <p class="dateNow" id="dateToday"></p>
-                        <h3 class="place text-center">Baden</h3>
-                        <h3 class="degree text-center">28°</h3>
+                        <h3 id="stadtName" class="place text-center">???</h3>
+                        <h3 class="degree text-center" id="temp1now">???°</h3>
                         <img class="weathericon" src="img/Day Sun.svg" alt="Sonne am Tag">
+                        <p class="min" id="day1Min">Min:</p>
+                        <p class="max" id="day1Max">Max:</p>
                         <p class="wind">Wind:</p>
                         <p class="humidity">Luftfeuchtigkeit:</p>
                         <p class="airquality">Luftqualität:</p>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-6 col-12">
+                <div class="card card2 col-lg-3 col-md-6 col-12 gy-5 gy-lg-0 gy-md-0">
                     <div class="card-body">
                         <p class="dateNow" id="dateTmr"></p>
-                        <h3 class="place text-center">Baden</h3>
-                        <h3 class="degree text-center">28°</h3>
+                        <h3 id="stadtName2" class="place text-center">???</h3>
                         <img class="weathericon" src="img/Day Rain.svg" alt="Sonne am Tag">
-                        <p class="wind">Wind:</p>
-                        <p class="humidity">Luftfeuchtigkeit:</p>
-                        <p class="airquality">Luftqualität:</p>
+                        <p class="min" id="day2Min">Min:</p>
+                        <p class="max" id="day2Max">Max:</p>
                     </div>
                 </div>
-                <div class="card col-lg-3 col-md-6 col-12">
+                <div class="card card3 col-lg-3 col-md-6 col-12 gy-5 gy-lg-0 gy-md-5">
                     <div class="card-body">
                         <p class="dateNow" id="dateOvrTmr"></p>
-                        <h3 class="place text-center">Baden</h3>
-                        <h3 class="degree text-center">28°</h3>
+                        <h3 id="stadtName3" class="place text-center">???</h3>
                         <img class="weathericon" src="img/Night Moon.svg" alt="Sonne am Tag">
-                        <p class="wind">Wind:</p>
-                        <p class="humidity">Luftfeuchtigkeit:</p>
-                        <p class="airquality">Luftqualität:</p>
+                        <p class="min" id="day3Min">Min:</p>
+                        <p class="max" id="day3Max">Max:</p>
                     </div>
                 </div>
 
-                <div class="card col-lg-3 col-md-6 col-12">
+                <div class="card card4 col-lg-3 col-md-6 col-12 gy-5 gy-lg-0 gy-md-5">
                     <div class="card-body">
                         <p class="dateNow" id="dateOvrOvrTmr"></p>
-                        <h3 class="place text-center">Baden</h3>
-                        <h3 class="degree text-center">28°</h3>
+                        <h3 id="stadtName4" class="place text-center">???</h3>
                         <img class="weathericon" src="img/Night Snow.svg" alt="Sonne am Tag">
-                        <p class="wind">Wind:</p>
-                        <p class="humidity">Luftfeuchtigkeit:</p>
-                        <p class="airquality">Luftqualität:</p>
+                        <p class="min" id="day4Min">Min:</p>
+                        <p class="max" id="day4Max">Max:</p>
                     </div>
                 </div>
             </div>
@@ -93,5 +95,6 @@
 
     document.getElementById("dateOvrOvrTmr").innerHTML = dateovrovrtmr;
 </script>
+<script src="main.js"></script>
 
 </html>
