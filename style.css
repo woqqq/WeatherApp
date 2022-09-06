@@ -10,3 +10,31 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.card4 {
+    margin-bottom: 150px;
+}
+
+.card3{
+    margin-bottom: 150px;
+}
+
+.card2{
+    margin-bottom: 150px;
+}
+
+.stadtName {
+    text-transform: capitalize;
+}
+
+.stadtName2 {
+    text-transform: capitalize;
+}
+
+.stadtName3 {
+    text-transform: capitalize;
+}
+
+.stadtName4 {
+    text-transform: capitalize;
+}
