@@ -9,6 +9,7 @@ function GetInfo() {
     document.getElementById("stadtName2").style.textTransform = "capitalize";
     document.getElementById("stadtName3").style.textTransform = "capitalize";
     document.getElementById("stadtName4").style.textTransform = "capitalize";
+    weatherIcon = document.querySelector(".weathericon");
 
     // https://weatherstack.com/ api wo die zeit von diesem ort auch angegeben ist.
 
@@ -16,17 +17,36 @@ function GetInfo() {
         .then(response => response.json())
         .then(data => {
 
-            document.getElementById("temp1now").innerHTML = Number(data.list[0].main.temp - 273.15).toFixed(1) + "°";
-
+            document.getElementById("temp1now").innerHTML = Number(data.list[0].main.temp - 273.15).toFixed(0) + "°";
+            document.getElementById("wind").innerHTML = Number(data.list[0].wind.speed).toFixed(2) + " m/s";
+            document.getElementById("humidity").innerHTML = Number(data.list[0].main.humidity).toFixed(0) + "%";
+            document.getElementById("pressure").innerHTML = Number(data.list[0].main.pressure).toFixed(0) + " hPa";
             //Getting the min and max values for each day
             for (i = 0; i < 4; i++) {
-                document.getElementById("day" + (i + 1) + "Min").innerHTML = "Min: " + Number(data.list[i].main.temp_min - 273.15).toFixed(2) + "°";
+                document.getElementById("day" + (i + 1) + "Min").innerHTML = Number(data.list[i].main.temp_min - 273.15).toFixed(0) + "°";
                 //Number(1.3450001).toFixed(2); // 1.35
             }
 
             for (i = 0; i < 4; i++) {
-                document.getElementById("day" + (i + 1) + "Max").innerHTML = "Max: " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°";
+                document.getElementById("day" + (i + 1) + "Max").innerHTML = Number(data.list[i].main.temp_max - 273.15).toFixed(0) + "°";
             }
+
+            /*for (i = 0; i < 4; i++){
+                var iconcode = a.weather[i].icon;
+                var iconurl = iconcode + ".png";
+
+                $('#wicon').attr('src', iconurl);
+            }*/
+            for (i = 0; i < 4; i++) {
+                let locationIcon = document.querySelector('.weathericon' + (i + 1));
+                const {
+                    icon
+                } = data.list[i].weather[0];
+                locationIcon.innerHTML = document.getElementById("image" + (i + 1)).src = `img/${icon}.png`;
+                //`<img src="img/${icon}.png">`;
+            }
+
+
 
             console.log(data)
         })
@@ -36,4 +56,6 @@ function GetInfo() {
             location.reload();
             // Forntite
         })
+
+
 }
