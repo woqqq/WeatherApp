@@ -1,14 +1,26 @@
 body {
     background-image: url("/img/Background.png");
-    background-size: cover;
+    background-size: auto;
 }
-.weathericon1, .weathericon2, .weathericon3, .weathericon4, .iconImg{
+
+.weathericon1,
+.weathericon2,
+.weathericon3,
+.weathericon4,
+.iconImg {
     width: 90px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.card1, .card2, .card3, .card4, .card5, .card6, .card7 {
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7 {
     margin-bottom: 50px;
 }
 
@@ -16,25 +28,69 @@ body {
 .stadtName {
     text-transform: capitalize;
 }
+
 .stadtName2 {
     text-transform: capitalize;
 }
+
 .stadtName3 {
     text-transform: capitalize;
 }
+
 .stadtName4 {
     text-transform: capitalize;
 }
-.min-max > .min {
+
+.min-max>.min {
     color: #7f7f7f;
     margin-left: 1em;
 }
+
 .min-max {
     display: flex;
     margin-top: 1em;
     justify-content: center;
 }
-.wind {
-    width: 125px;
+
+.iconImg {
+    width: auto;
+    height: 90px;
+}
+
+@media screen and (max-width: 1200px) {
+    #stadtName {
+        font-size: 24px;
+    }
+
+    #stadtName2 {
+        font-size: 24px;
+    }
+
+    #stadtName3 {
+        font-size: 24px;
+    }
+
+    #stadtName4 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .windHighlight {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .card1,
+    .card2 {
+        margin-bottom: 30px;
+    }
+
+    .card3,
+    .card4 {
+        margin-bottom: 30px;
+    }
 }
 
