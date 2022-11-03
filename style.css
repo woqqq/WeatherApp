@@ -24,23 +24,6 @@ body {
     margin-bottom: 50px;
 }
 
-
-.stadtName {
-    text-transform: capitalize;
-}
-
-.stadtName2 {
-    text-transform: capitalize;
-}
-
-.stadtName3 {
-    text-transform: capitalize;
-}
-
-.stadtName4 {
-    text-transform: capitalize;
-}
-
 .min-max>.min {
     color: #7f7f7f;
     margin-left: 1em;
@@ -58,7 +41,7 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-    #stadtName {
+    #stadtName1 {
         font-size: 24px;
     }
 
@@ -73,16 +56,31 @@ body {
     #stadtName4 {
         font-size: 24px;
     }
+
+    .titleHighlights {
+        font-size: 12.9px;
+    }
 }
 
-@media screen and (max-width: 768px) {
-    .windHighlight {
-        font-size: 14px;
+@media (max-width: 510px) {
+    .iconImg {
+        height: 70px;
+    }
+}
+
+@media (max-width: 350px) {
+    .iconImg {
+        height: 60px;
+    }
+}
+
+@media (max-width: 492px) {
+    .titleHighlights {
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 991px) {
-
     .card1,
     .card2 {
         margin-bottom: 30px;
@@ -93,4 +91,3 @@ body {
         margin-bottom: 30px;
     }
 }
-

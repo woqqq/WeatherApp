@@ -1,14 +1,14 @@
 function GetInfo() {
 
     // YOUR APIKEY
-    const APIKEY = "YOURAPIKEY";
+    const APIKEY = "df63e32cf56eaeb27189ef1ecf347c34";
 
 
     var newSearch = document.getElementById("stadtInput");
     var newStadt = document.getElementById("stadtName");
 
     weatherIcon = document.querySelector(".weathericon");
-
+    
 
     fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + newSearch.value + "&appid=" + APIKEY)
         .then(response => response.json())
